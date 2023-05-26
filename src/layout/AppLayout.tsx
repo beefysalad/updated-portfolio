@@ -20,7 +20,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
         py={{ base: '2', md: '3' }}
         minH='100vh'
       >
-        <Flex pt='15' flexDirection='column' w='full' h='full' flexGrow='1'>
+        <Flex pt='20' flexDirection='column' w='full' h='full' flexGrow='1'>
           {children}
         </Flex>
         <Footer />
