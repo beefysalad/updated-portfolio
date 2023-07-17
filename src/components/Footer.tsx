@@ -9,6 +9,7 @@ import {
   Link,
   Spacer,
   Text,
+  Tooltip,
   VStack,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -33,12 +34,10 @@ const Footer = ({ children }: FooterProps) => {
     >
       <Flex justifyContent={'center'} py='5' px='200px'>
         <VStack mt='5' textAlign={'center'} w='100%'>
-          <Heading size={'lg'}>Patrick</Heading>
+          <Divider orientation='horizontal' w='100%' />
+          <Heading size={'lg'}>Connect with me</Heading>
 
-          <HStack
-            w='100%'
-            justifyContent={{ base: 'center', md: 'flex-start' }}
-          >
+          <HStack w='100%' justifyContent={{ base: 'center', md: 'center' }}>
             <a
               target='_blank'
               href='https://www.linkedin.com/in/john-patrick-ryan-mandal-407bb8270/'
@@ -61,18 +60,26 @@ const Footer = ({ children }: FooterProps) => {
               {' '}
               <Icon cursor={'pointer'} boxSize={5} as={FaFacebook} />
             </a>
-            <a target='_blank' href='#' rel='noreferrer'>
-              {' '}
-              <Icon cursor={'pointer'} boxSize={5} as={MdEmail} />
-            </a>
-            <a target='_blank' href='#' rel='noreferrer'>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.instagram.com/ptrcckkk/'
+            >
               {' '}
               <Icon cursor={'pointer'} boxSize={5} as={FaInstagram} />
             </a>
+            <Tooltip
+              label='mandal.johnpatrickryan@gmail.com'
+              fontSize='md'
+              hasArrow
+            >
+              <span>
+                <Icon boxSize={5} as={MdEmail} />
+              </span>
+            </Tooltip>
           </HStack>
         </VStack>
       </Flex>
-      <Divider orientation='horizontal' w='100%' />
     </Box>
   );
 };
