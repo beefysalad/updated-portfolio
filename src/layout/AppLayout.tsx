@@ -17,13 +17,13 @@ const AppLayout = ({ children }: AppLayoutProps) => {
         justifyContent='start'
         alignItems='center'
         maxW='container.2xl'
-        px={{ base: '4', md: '5', lg: '5' }}
-        py={{ base: '2', md: '3' }}
         minH='100vh'
+        px={{ base: '4', md: '0' }}
+        py={{ base: '2', md: '0' }}
       >
         <Flex
           pt='200'
-          px={{ base: '3', md: '5', lg: '8' }}
+          // px={{ base: '3', md: '5', lg: '8' }}
           flexDirection='column'
           w='full'
           h='full'
@@ -32,8 +32,8 @@ const AppLayout = ({ children }: AppLayoutProps) => {
           <ParticleBackground />
           {children}
         </Flex>
-        <Footer />
       </Container>
+      <Footer />
     </>
   );
 };
