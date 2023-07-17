@@ -1,6 +1,6 @@
 import { Container, Flex } from '@chakra-ui/react';
-import Footer from '../components/Footer';
-import { Header } from '../components/Header';
+import Footer from '../components/Footer/Footer';
+import { Header } from '../components/Header/Header';
 import { ParticleBackground } from '../config/ParticleBackground';
 
 interface AppLayoutProps {
@@ -33,6 +33,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
           {children}
         </Flex>
       </Container>
+      {/* TODO: FIX THIS FOOTER COMPONENT CAUES IT IS BUGGY ON MOBILE SCREENS */}
       <Footer />
     </>
   );

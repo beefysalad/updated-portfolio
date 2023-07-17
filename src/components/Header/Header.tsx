@@ -10,8 +10,10 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import { ColorModeSwitcher } from '../ColorModeSwitcher';
+import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import { useEffect, useState } from 'react';
+import { FloatingSocialBar } from './FloatingSocialBar';
+import { GoUpButton } from './GoUpButton';
 export const Header = () => {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false);
   const bg = useColorModeValue('gray.50', 'rgb(9,24,47)');
@@ -133,6 +135,8 @@ export const Header = () => {
         <Spacer />
         <ColorModeSwitcher />
       </Flex>
+      <FloatingSocialBar />
+      <GoUpButton />
     </Box>
   );
 };

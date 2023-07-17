@@ -13,6 +13,7 @@ import {
   VStack,
   useColorModeValue,
 } from '@chakra-ui/react';
+import footerLogo from '../assets/footer-pic.svg';
 import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 interface FooterProps {
@@ -68,6 +69,7 @@ const Footer = ({ children }: FooterProps) => {
               {' '}
               <Icon cursor={'pointer'} boxSize={5} as={FaInstagram} />
             </a>
+            {/* <img src={footerLogo} width='500px' height='500px' /> */}
             <Tooltip
               label='mandal.johnpatrickryan@gmail.com'
               fontSize='md'
