@@ -98,6 +98,19 @@ export const Header = () => {
             <Text
               cursor={'pointer'}
               _hover={{ underline: 'none' }}
+              onClick={() => scrollToTarget('skills')}
+            >
+              Skills
+            </Text>
+          </Heading>
+          <Heading
+            display={{ base: 'none', md: 'inline' }}
+            size={{ base: 'xs', md: 'sm', lg: 'sm' }}
+            _hover={{ color: headerText }}
+          >
+            <Text
+              cursor={'pointer'}
+              _hover={{ underline: 'none' }}
               onClick={() => scrollToTarget('projects')}
             >
               Projects
@@ -111,22 +124,9 @@ export const Header = () => {
             <Text
               cursor={'pointer'}
               _hover={{ underline: 'none' }}
-              onClick={() => scrollToTarget('home')}
+              onClick={() => scrollToTarget('socials')}
             >
               Socials
-            </Text>
-          </Heading>
-          <Heading
-            display={{ base: 'none', md: 'inline' }}
-            size={{ base: 'xs', md: 'sm', lg: 'sm' }}
-            _hover={{ color: headerText }}
-          >
-            <Text
-              cursor={'pointer'}
-              _hover={{ underline: 'none' }}
-              onClick={() => scrollToTarget('home')}
-            >
-              Resume
             </Text>
           </Heading>
         </HStack>
