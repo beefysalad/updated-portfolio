@@ -23,7 +23,7 @@ export const Skills = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
   return (
-    <Box w={{ base: '100%', md: '70%' }} color={bg} id='skills' mt='100px'>
+    <Box w={{ base: '100%', md: '70%' }} color={bg} id='skills'>
       <VStack mt={50} w='100%' flexDirection={{ base: 'column', md: 'column' }}>
         <motion.div
           ref={ref}
