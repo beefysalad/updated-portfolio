@@ -22,6 +22,7 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
+import avatar from '../../assets/bg-pic.png';
 import { FaGithub } from 'react-icons/fa';
 interface ProjectCardProps {
   title: string;
@@ -84,9 +85,19 @@ export const ProjectCard = ({
                   </Tag>
                 </WrapItem>
               ))}
-              <Badge cursor={'pointer'} colorScheme='green'>
+              {/* <Badge cursor={'pointer'} colorScheme='green'>
                 {role}
-              </Badge>
+              </Badge> */}
+              <Tag size='lg' colorScheme='green' borderRadius='full'>
+                <Avatar
+                  src={avatar}
+                  size='xs'
+                  name='Segun Adebayo'
+                  ml={-1}
+                  mr={2}
+                />
+                <TagLabel>{role}</TagLabel>
+              </Tag>
             </Wrap>
           </Center>
 
