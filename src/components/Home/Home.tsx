@@ -1,6 +1,8 @@
 import {
   Box,
   Code,
+  Divider,
+  Flex,
   HStack,
   Heading,
   Icon,
@@ -18,7 +20,7 @@ export const Home = () => {
   const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
   const color = useColorModeValue('black', '#64ffda');
   return (
-    <Box w='100%' color={bg} id='home' h='100vh'>
+    <Box w={{ base: '100%', md: '100%' }} color={bg} id='home'>
       <Stack
         direction={{ base: 'column', md: 'row' }}
         justifyContent={{ base: 'center', md: 'space-evenly' }}
@@ -113,6 +115,9 @@ export const Home = () => {
           <Spacer />
         </Box>
       </Stack>
+      <Flex justifyContent={'center'} mt='15vh'>
+        <Divider w='70%' />
+      </Flex>
     </Box>
   );
 };

@@ -74,6 +74,7 @@ const Footer = ({ children }: FooterProps) => {
               label='mandal.johnpatrickryan@gmail.com'
               fontSize='md'
               hasArrow
+              placement='bottom'
             >
               <span>
                 <Icon boxSize={5} as={MdEmail} />

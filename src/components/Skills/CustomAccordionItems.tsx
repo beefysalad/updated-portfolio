@@ -27,9 +27,16 @@ export const CustomAccordionItems = ({
       <Progress
         size='md'
         value={progressValue}
-        colorScheme='teal'
-        hasStripe
+        colorScheme='cyan'
+        // hasStripe
         isAnimated
+      />
+      <Progress
+        isAnimated
+        value={progressValue}
+        size='xs'
+        colorScheme='cyan'
+        hasStripe
       />
     </Box>
   );

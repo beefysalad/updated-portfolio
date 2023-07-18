@@ -1,4 +1,19 @@
-import { Badge, Box, Button, Code, HStack, Heading, Icon, Link, Spacer, Text, VStack, useColorModeValue } from '@chakra-ui/react';
+import {
+  Badge,
+  Box,
+  Button,
+  Code,
+  Divider,
+  Flex,
+  HStack,
+  Heading,
+  Icon,
+  Link,
+  Spacer,
+  Text,
+  VStack,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { FaCalendar } from 'react-icons/fa';
 import { GoMortarBoard } from 'react-icons/go';
 import { MdWork } from 'react-icons/md';
@@ -7,7 +22,7 @@ export const About = () => {
   const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
   const color = useColorModeValue('black', '#64ffda');
   return (
-    <Box w='70%' color={bg} id='about'>
+    <Box w={{ base: '100%', md: '70%' }} color={bg} id='about' mt='100px'>
       <VStack alignItems={{ base: 'center', md: 'flex-start' }}>
         <Heading size={'3xl'} textAlign={'center'}>
           <TypeWriter
@@ -31,17 +46,25 @@ export const About = () => {
           As a graduate of Bachelor of Science in Computer Engineering, I am
           dedicated to building innovative and dynamic web applications that
           exceed expectations. With a strong foundation in HTML, CSS, and
-          JavaScript, My tech stack includes but not limited to
+          JavaScript, My tech stack includes but not limited to{' '}
           <Code fontSize={'md'} color={color}>
             Nest.js
           </Code>
           ,{' '}
           <Code fontSize={'md'} color={color}>
-            React with TypeScript
+            React
+          </Code>{' '}
+          with{' '}
+          <Code fontSize={'md'} color={color}>
+            TypeScript
           </Code>
           , and{' '}
           <Code fontSize={'md'} color={color}>
-            MySQL with Prisma ORM
+            MySQL
+          </Code>{' '}
+          with{' '}
+          <Code fontSize={'md'} color={color}>
+            Prisma ORM
           </Code>
           .
         </Text>

@@ -34,7 +34,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
         </Flex>
       </Container>
       {/* TODO: FIX THIS FOOTER COMPONENT CAUES IT IS BUGGY ON MOBILE SCREENS */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
