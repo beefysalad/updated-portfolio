@@ -1,5 +1,6 @@
-import { Box, Flex, Tooltip } from '@chakra-ui/react';
-
+import { Box, Tooltip } from '@chakra-ui/react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 interface LanguageProps {
   children: React.ReactNode;
   label: string;
@@ -18,6 +19,8 @@ export const LanguageComponent = ({ children, label }: LanguageProps) => {
       boxShadow={'lg'}
       cursor={'pointer'}
       p={'auto'}
+      as={motion.div}
+      whileTap={{ scale: 2 }}
     >
       <Tooltip label={label} hasArrow>
         {children}

@@ -16,16 +16,37 @@ import {
 import nest from '../../assets/nest.svg';
 import { CustomAccordionItems } from './CustomAccordionItems';
 import { LanguageComponent } from './LanguageComponent';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 export const Skills = () => {
   const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
+  const ref = useRef(null);
+  const inView = useInView(ref);
   return (
     <Box w={{ base: '100%', md: '70%' }} color={bg} id='skills' mt='100px'>
       <VStack mt={50} w='100%' flexDirection={{ base: 'column', md: 'column' }}>
-        <Heading>Skills</Heading>
-        <Text>My Technical Skills</Text>
-
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={
+            inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+          }
+          transition={{ duration: 0.5 }} // Animation duration
+        >
+          <Heading>Skills</Heading>
+          <Text>My Technical Skills</Text>
+        </motion.div>
         <HStack w='100%' flexDirection={{ base: 'column', md: 'row' }}>
-          <Box w={{ base: '100%', md: '50%' }}>
+          <Box
+            ref={ref}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={
+              inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+            }
+            as={motion.div}
+            transition={{ duration: '0.5' }}
+            w={{ base: '100%', md: '50%' }}
+          >
             <Accordion allowToggle={false} defaultIndex={[0]}>
               <AccordionItem>
                 <h2>
@@ -37,7 +58,7 @@ export const Skills = () => {
                     >
                       <HStack textAlign={{ base: 'center', md: 'left' }}>
                         {' '}
-                        <Heading size='md'>Frontend Development</Heading>
+                        <Heading size='md'>Frontend</Heading>
                       </HStack>
                       <Text mt='2'>Watch my progress</Text>
                     </Box>
@@ -175,7 +196,17 @@ export const Skills = () => {
               </AccordionItem>
             </Accordion>
           </Box>
-          <Box w={{ base: '100%', md: '50%' }}>
+
+          <Box
+            ref={ref}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={
+              inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+            }
+            as={motion.div}
+            transition={{ duration: '0.5' }}
+            w={{ base: '100%', md: '50%' }}
+          >
             <Accordion allowToggle={false} defaultIndex={[0]}>
               <AccordionItem>
                 <h2>
@@ -187,7 +218,7 @@ export const Skills = () => {
                     >
                       <HStack textAlign={{ base: 'center', md: 'left' }}>
                         {' '}
-                        <Heading size='md'>Backend Development</Heading>
+                        <Heading size='md'>Backend </Heading>
                       </HStack>
                       <Text mt='2'>Watch my progress</Text>
                     </Box>
@@ -299,9 +330,17 @@ export const Skills = () => {
             </Accordion>
           </Box>
         </HStack>
+
         <Spacer />
       </VStack>
-      <VStack>
+
+      <VStack
+        ref={ref}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+        as={motion.div}
+        transition={{ duration: '0.5' }}
+      >
         <Text
           mt={'50px'}
           fontSize={{ base: 'lg', md: 'xl' }}

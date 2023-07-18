@@ -1,4 +1,4 @@
-import { Container, Divider, Flex } from '@chakra-ui/react';
+import { Container, Flex } from '@chakra-ui/react';
 import { Home } from '../components/Home/Home';
 import { About } from '../components/About/About';
 import { Skills } from '../components/Skills/Skills';

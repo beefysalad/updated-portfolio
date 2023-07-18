@@ -10,6 +10,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <>
       <Header />
+
       <Container
         as={Flex}
         gap='5'
