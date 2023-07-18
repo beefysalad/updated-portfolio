@@ -55,6 +55,7 @@ export const ProjectCard = ({
           alt='Green double couch with wooden legs'
           borderRadius='lg'
           width={'100%'}
+          height={'250'}
         />
         <Stack mt='6' spacing='3'>
           <Text textAlign={'center'}>{description}</Text>
@@ -105,30 +106,40 @@ export const ProjectCard = ({
           </Center>
 
           <HStack justifyContent={'space-evenly'}>
-            <Button
-              leftIcon={<FaGithub />}
-              variant={'outline'}
-              colorScheme='teal'
-              as={Link}
-              href={repo}
-              _hover={{ transform: 'translateX(-5px)', textDecoration: 'none' }}
-              transition='transform 0.3s'
-              target='_blank'
-            >
-              Visit Repository
-            </Button>
-            <Button
-              leftIcon={<FaGithub />}
-              variant={'outline'}
-              colorScheme='teal'
-              as={Link}
-              href={demo}
-              _hover={{ transform: 'translateX(5px)', textDecoration: 'none' }}
-              transition='transform 0.3s'
-              target='_blank'
-            >
-              Live Demo
-            </Button>
+            {repo && (
+              <Button
+                leftIcon={<FaGithub />}
+                variant='outline'
+                colorScheme='teal'
+                as={Link}
+                href={repo}
+                _hover={{
+                  transform: 'translateX(-5px)',
+                  textDecoration: 'none',
+                }}
+                transition='transform 0.3s'
+                target='_blank'
+              >
+                Visit Repository
+              </Button>
+            )}
+            {demo && (
+              <Button
+                leftIcon={<FaGithub />}
+                variant={'outline'}
+                colorScheme='teal'
+                as={Link}
+                href={demo}
+                _hover={{
+                  transform: 'translateX(5px)',
+                  textDecoration: 'none',
+                }}
+                transition='transform 0.3s'
+                target='_blank'
+              >
+                Live Demo
+              </Button>
+            )}
           </HStack>
         </Stack>
       </CardBody>
