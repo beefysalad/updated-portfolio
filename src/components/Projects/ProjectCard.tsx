@@ -88,17 +88,20 @@ export const ProjectCard = ({
               {/* <Badge cursor={'pointer'} colorScheme='green'>
                 {role}
               </Badge> */}
-              <Tag size='lg' colorScheme='green' borderRadius='full'>
-                <Avatar
-                  src={avatar}
-                  size='xs'
-                  name='Segun Adebayo'
-                  ml={-1}
-                  mr={2}
-                />
-                <TagLabel>{role}</TagLabel>
-              </Tag>
             </Wrap>
+          </Center>
+          <Center>
+            {' '}
+            <Tag size='lg' colorScheme='green' borderRadius='full'>
+              <Avatar
+                src={avatar}
+                size='xs'
+                name='Segun Adebayo'
+                ml={-1}
+                mr={2}
+              />
+              <TagLabel>{role}</TagLabel>
+            </Tag>
           </Center>
 
           <HStack justifyContent={'space-evenly'}>

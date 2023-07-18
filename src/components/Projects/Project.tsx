@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { ProjectCard } from './ProjectCard';
 import tems from '../../assets/temslogo.png';
+import cct from '../../assets/cct.png';
 export const Project = () => {
   const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
   return (
@@ -31,6 +32,7 @@ export const Project = () => {
               'Next.js',
               'Prisma',
               'PostgreSQL',
+              'Chakra UI',
             ]}
             type={[
               'Web',
@@ -44,7 +46,24 @@ export const Project = () => {
           />
 
           <Spacer />
-
+          <ProjectCard
+            image={cct}
+            title='Contactless Covid Tracer '
+            description='a contact tracer system developed for establishments in our course subject. The system handles contact tracing, health declaration, close contact notifications and etc. for partnered establishments.'
+            tags={[
+              'HTML',
+              'CSS',
+              'JavaScript',
+              'Node.js',
+              'Express.js',
+              'Bootsrap 5',
+              'MongoDB',
+            ]}
+            type={['Web', 'School Project', 'Team Project']}
+            role='Fullstack Developer'
+            demo='https://contact-tracing-osbe.herokuapp.com/'
+            repo='https://github.com/beefysalad/Contact-Tracing-OSBE'
+          />
           <Spacer />
         </Stack>
       </VStack>
