@@ -20,14 +20,29 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 export const Skills = () => {
   const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
+const ref= useRef(null)
+const inView = useInView(ref)
+
+const ref2= useRef(null)
+const inView2 = useInView(ref2)
+const ref3= useRef(null)
+const inView3 = useInView(ref3)
+const ref4= useRef(null)
+const inView4 = useInView(ref4)
+
 
   return (
     <Box w={{ base: '100%', md: '70%' }} color={bg} id='skills'>
       <VStack mt={50} w='100%' flexDirection={{ base: 'column', md: 'column' }}>
-       
+       <motion.div 
+        ref={ref}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+        transition={{ duration: '0.5' }}
+>
           <Heading>Skills</Heading>
           <Text>My Technical Skills</Text>
-        
+        </motion.div>
         <HStack w='100%' flexDirection={{ base: 'column', md: 'row' }}>
           <Box
             w={{ base: '100%', md: '50%' }}
@@ -37,6 +52,11 @@ export const Skills = () => {
                 <h2>
                   <AccordionButton>
                     <Box
+ref={ref2}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={inView2 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+        as={motion.div}
+        transition={{ duration: '0.5' }}
                       as='span'
                       flex='1'
                       textAlign={{ base: 'center', md: 'left' }}
@@ -190,6 +210,11 @@ export const Skills = () => {
                 <h2>
                   <AccordionButton>
                     <Box
+ref={ref3}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={inView3 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+        as={motion.div}
+        transition={{ duration: '0.5' }}
                       as='span'
                       flex='1'
                       textAlign={{ base: 'center', md: 'left' }}
@@ -313,9 +338,9 @@ export const Skills = () => {
       </VStack>
 
       <VStack
-        ref={ref}
+        ref={ref4}
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+        animate={inView4 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
         as={motion.div}
         transition={{ duration: '0.5' }}
       >
