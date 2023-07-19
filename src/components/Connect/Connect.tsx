@@ -22,7 +22,13 @@ export const Connect = () => {
   const color = useColorModeValue('black', '#64ffda');
   const marginTopBase = useBreakpointValue({ base: '20px', md: '0' });
   return (
-    <Box id={'connect'} w={{ base: '100%', md: '70%' }} color={bg} mt='150px'>
+    <Box
+      id={'connect'}
+      w={{ base: '100%', md: '70%' }}
+      color={bg}
+      mt='150px'
+      mb='150px'
+    >
       <HStack w='100%' flexDirection={{ base: 'column', md: 'column' }}>
         <Heading size='2xl'>Connect</Heading>
         <Text>Get in touch with me</Text>

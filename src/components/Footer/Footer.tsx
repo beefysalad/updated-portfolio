@@ -12,6 +12,8 @@ import {
   Tooltip,
   VStack,
   useColorModeValue,
+  Kbd,
+  Code,
 } from '@chakra-ui/react';
 import footerLogo from '../assets/footer-pic.svg';
 import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
@@ -33,54 +35,19 @@ const Footer = ({ children }: FooterProps) => {
       justifyContent={'space-between'}
       boxShadow={'lg'}
     >
-      <Flex justifyContent={'center'} py='5' px='200px'>
-        <VStack mt='5' textAlign={'center'} w='100%'>
-          <Divider orientation='horizontal' w='100%' />
-          <Heading size={'lg'}>Connect with me</Heading>
-
-          <HStack w='100%' justifyContent={{ base: 'center', md: 'center' }}>
-            <a
-              target='_blank'
-              href='https://www.linkedin.com/in/john-patrick-ryan-mandal-407bb8270/'
-              rel='noreferrer'
-            >
-              <Icon cursor={'pointer'} boxSize={5} as={FaLinkedin} />
-            </a>
-            <a
-              target='_blank'
-              href='https://github.com/beefysalad'
-              rel='noreferrer'
-            >
-              <Icon cursor={'pointer'} boxSize={5} as={FaGithub} />
-            </a>
-            <a
-              target='_blank'
-              href='https://www.facebook.com/Jpatrickzxc/'
-              rel='noreferrer'
-            >
-              {' '}
-              <Icon cursor={'pointer'} boxSize={5} as={FaFacebook} />
-            </a>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www.instagram.com/ptrcckkk/'
-            >
-              {' '}
-              <Icon cursor={'pointer'} boxSize={5} as={FaInstagram} />
-            </a>
-            {/* <img src={footerLogo} width='500px' height='500px' /> */}
-            <Tooltip
-              label='mandal.johnpatrickryan@gmail.com'
-              fontSize='md'
-              hasArrow
-              placement='bottom'
-            >
-              <span>
-                <Icon boxSize={5} as={MdEmail} />
-              </span>
-            </Tooltip>
-          </HStack>
+      <Flex justifyContent={'center'}>
+        <VStack mt='30px' textAlign={'center'}>
+          <Text>
+            Just like me, this website will continue to evolve.{' '}
+            <span>
+              <Code>Never Static</Code>
+            </span>
+            .
+          </Text>
+          <Text fontSize={'xs'}>
+            Built with React, TypeScript, Chakra UI and ☕️🔥
+          </Text>
+          <Text fontSize={'xs'}>Copyright © Saladu 2023</Text>
         </VStack>
       </Flex>
     </Box>

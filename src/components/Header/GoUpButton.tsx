@@ -40,6 +40,7 @@ export const GoUpButton = () => {
       pointerEvents={isSticky ? 'auto' : 'none'}
       transition='opacity 0.3s ease'
       onClick={handleGoUp}
+      size={'sm'}
     />
   );
 };
