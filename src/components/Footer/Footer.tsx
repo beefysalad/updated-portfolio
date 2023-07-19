@@ -48,6 +48,7 @@ const Footer = ({ children }: FooterProps) => {
             Built with React, TypeScript, Chakra UI and ☕️🔥
           </Text>
           <Text fontSize={'xs'}>Copyright © Saladu 2023</Text>
+          <Text fontSize={'10'}>Last Updated July 19, 2023</Text>
         </VStack>
       </Flex>
     </Box>
