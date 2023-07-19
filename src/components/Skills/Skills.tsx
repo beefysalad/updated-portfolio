@@ -52,11 +52,6 @@ const inView4 = useInView(ref4)
                 <h2>
                   <AccordionButton>
                     <Box
-ref={ref2}
-        initial={{ opacity: '0', scale: '0.8' }}
-        animate={inView2 ? { opacity: '1', scale: '1'} : { opacity: '0', scale: '0.8' }}
-        as={motion.div}
-        transition={{ duration: '0.5' }}
                       as='span'
                       flex='1'
                       textAlign={{ base: 'center', md: 'left' }}
@@ -210,11 +205,6 @@ ref={ref2}
                 <h2>
                   <AccordionButton>
                     <Box
-ref={ref3}
-        initial={{ opacity: '0', scale: '0.8' }}
-        animate={inView3 ? { opacity: '1', scale: '1'} : { opacity: '0', scale: '0.8' }}
-        as={motion.div}
-        transition={{ duration: '0.5' }}
                       as='span'
                       flex='1'
                       textAlign={{ base: 'center', md: 'left' }}
@@ -338,11 +328,6 @@ ref={ref3}
       </VStack>
 
       <VStack
-        ref={ref4}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={inView4 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-        as={motion.div}
-        transition={{ duration: '0.5' }}
       >
         <Text
           mt={'50px'}
