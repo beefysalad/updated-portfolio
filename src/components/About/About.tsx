@@ -112,7 +112,11 @@ export const About = () => {
         transition={{ duration: 0.7 }} // Animation duration
       >
         <VStack alignItems={{ base: 'center', md: 'flex-end' }} mt={'80px'}>
-          <HStack>
+          <Flex
+            flexDir={{ base: 'column-reverse', md: 'row' }} // Flex direction changes to 'column-reverse' on small screens and 'row' on medium screens and above
+            alignItems='center' // Align items vertically in the center
+            justifyContent='center' // Center the children horizontally
+          >
             <Heading size={'xl'} textAlign={'center'}>
               <TypeWriter
                 onInit={(typewriter) => {
@@ -127,7 +131,7 @@ export const About = () => {
               />
             </Heading>
             <Icon boxSize={7} as={GoMortarBoard} />
-          </HStack>
+          </Flex>
           <Text textAlign={{ base: 'center' }}>
             Cebu Institute of Technology - University
           </Text>
@@ -135,9 +139,9 @@ export const About = () => {
             Bachelor of Science in Computer Engineering
           </Code>
           <Badge variant='outline'>College</Badge>
-          <HStack>
-            {' '}
-            <p>2018 - 2023 </p>
+          <HStack as={Flex}>
+            <Text order={{ base: 1, md: 0 }}>2018-2023</Text>
+
             <Icon color={color} boxSize={5} as={FaCalendar} />
           </HStack>
         </VStack>
@@ -149,8 +153,12 @@ export const About = () => {
         transition={{ duration: 0.7 }} // Animation duration
       >
         <VStack alignItems={{ base: 'center', md: 'flex-start' }} mt={'50px'}>
-          <HStack>
-            <Icon boxSize={7} as={MdWork} />
+          <Flex
+            flexDir={{ base: 'column-reverse', md: 'row' }} // Flex direction changes to 'column-reverse' on small screens and 'row' on medium screens and above
+            alignItems='center' // Align items vertically in the center
+            justifyContent='center' // Center the children horizontally
+          >
+            <Icon order={{ base: 1, md: 0 }} boxSize={7} as={MdWork} />
             <Heading size={'xl'} textAlign={'center'}>
               <TypeWriter
                 onInit={(typewriter) => {
@@ -164,7 +172,7 @@ export const About = () => {
                 }}
               />
             </Heading>
-          </HStack>
+          </Flex>
           <Text>Sprobe Inc.</Text>
           <Code fontSize={'md'} color={color} textAlign={'center'}>
             Fullstack Web Developer

@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Flex,
   HStack,
   Heading,
   Progress,
@@ -62,11 +63,14 @@ export const Skills = () => {
                       flex='1'
                       textAlign={{ base: 'center', md: 'left' }}
                     >
-                      <HStack textAlign={{ base: 'center', md: 'left' }}>
-                        {' '}
-                        <Heading size='md'>Frontend</Heading>
-                      </HStack>
-                      <Text mt='2'>Watch my progress</Text>
+                      <Flex
+                        flexDirection='row'
+                        justifyContent={{ base: 'center', md: 'flex-start' }}
+                      >
+                        <Heading size='md' textAlign={'center'}>
+                          Frontend
+                        </Heading>
+                      </Flex>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -222,11 +226,12 @@ export const Skills = () => {
                       flex='1'
                       textAlign={{ base: 'center', md: 'left' }}
                     >
-                      <HStack textAlign={{ base: 'center', md: 'left' }}>
-                        {' '}
+                      <Flex
+                        flexDirection='row'
+                        justifyContent={{ base: 'center', md: 'flex-start' }}
+                      >
                         <Heading size='md'>Backend </Heading>
-                      </HStack>
-                      <Text mt='2'>Watch my progress</Text>
+                      </Flex>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>

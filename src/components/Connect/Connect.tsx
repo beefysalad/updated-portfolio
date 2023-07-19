@@ -56,7 +56,9 @@ export const Connect = () => {
                   <Heading textAlign={'right'} size={'md'}>
                     Email me
                   </Heading>
-                  <Code color={color}>mandal.johnpatrickryan.@gmail.com</Code>
+                  <Code fontSize={'xs'} color={color}>
+                    mandal.johnpatrickryan.@gmail.com
+                  </Code>
                 </HStack>
               </HStack>
               <HStack mt={{ base: '5', md: '10' }}>

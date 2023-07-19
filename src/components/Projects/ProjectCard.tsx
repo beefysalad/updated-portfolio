@@ -74,7 +74,7 @@ export const ProjectCard = ({
       whileTap={{ scale: 1.3 }}
       transition={{ duration: 0.2 }} // Animation duration
     >
-      <Card maxW={{ base: 'md', md: 'xl' }} w='100%' borderRadius={'lg'}>
+      <Card maxW={{ base: '320px', md: 'xl' }} w='100%' borderRadius={'lg'}>
         <CardBody
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
