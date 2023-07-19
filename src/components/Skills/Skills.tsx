@@ -53,8 +53,8 @@ const inView4 = useInView(ref4)
                   <AccordionButton>
                     <Box
 ref={ref2}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={inView2 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+        initial={{ opacity: '0', scale: '0.8' }}
+        animate={inView2 ? { opacity: '1', scale: '1'} : { opacity: '0', scale: '0.8' }}
         as={motion.div}
         transition={{ duration: '0.5' }}
                       as='span'
@@ -211,8 +211,8 @@ ref={ref2}
                   <AccordionButton>
                     <Box
 ref={ref3}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={inView3 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+        initial={{ opacity: '0', scale: '0.8' }}
+        animate={inView3 ? { opacity: '1', scale: '1'} : { opacity: '0', scale: '0.8' }}
         as={motion.div}
         transition={{ duration: '0.5' }}
                       as='span'
