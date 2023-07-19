@@ -60,7 +60,7 @@ export const Project = () => {
             ]}
             type={[
               'Web',
-              'School Project',
+              'Course Project',
               'Team Project',
               'University Project',
             ]}
@@ -85,7 +85,7 @@ export const Project = () => {
               'Bootsrap 5',
               'MongoDB',
             ]}
-            type={['Web', 'School Project', 'Team Project']}
+            type={['Web', 'Course Project', 'Team Project']}
             role='Fullstack Developer'
             repo='https://github.com/beefysalad/Contact-Tracing-OSBE'
           />
@@ -104,7 +104,7 @@ export const Project = () => {
               'TypeORM',
               'Chakra UI',
             ]}
-            type={['Web', 'School Project', 'Team Project']}
+            type={['Web', 'Course Project', 'Team Project']}
             role='Frontend Developer'
             repo='https://github.com/citu-cpe/handijob'
             gif={handijobgif}
@@ -118,7 +118,7 @@ export const Project = () => {
             tags={['Arduino', 'Blynk', 'C++', 'IFTT']}
             type={[
               'Embedded Systems',
-              'School Project',
+              'Course Project',
               'Team Project',
               'Internet-of-Things',
             ]}

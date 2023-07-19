@@ -15,14 +15,13 @@ import {
   Kbd,
   Code,
 } from '@chakra-ui/react';
-import footerLogo from '../assets/footer-pic.svg';
-import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
+
 interface FooterProps {
   children?: React.ReactNode;
 }
 const Footer = ({ children }: FooterProps) => {
   const bg = useColorModeValue('gray.50', 'rgb(9,24,47)');
+  const color = useColorModeValue('black', '#64ffda');
   return (
     <Box
       w='100%'
@@ -40,7 +39,7 @@ const Footer = ({ children }: FooterProps) => {
           <Text>
             Just like me, this website will continue to evolve.{' '}
             <span>
-              <Code>Never Static</Code>
+              <Code color={color}>Never Static</Code>
             </span>
             .
           </Text>
