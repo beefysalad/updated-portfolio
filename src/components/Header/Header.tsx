@@ -26,9 +26,13 @@ export const Header = () => {
   const scrollToTarget = (id: string) => {
     const target = document.getElementById(id);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      const { top } = target.getBoundingClientRect();
+      const offset = 100; // Adjust this value to set the desired margin to the top
+      window.scrollTo({
+        top: window.pageYOffset + top - offset,
+        behavior: 'smooth',
+      });
     }
-    console.log(target);
   };
 
   useEffect(() => {
@@ -128,9 +132,9 @@ export const Header = () => {
             <Text
               cursor={'pointer'}
               _hover={{ underline: 'none' }}
-              onClick={() => scrollToTarget('socials')}
+              onClick={() => scrollToTarget('connect')}
             >
-              Socials
+              Connect
             </Text>
           </Heading>
         </HStack>

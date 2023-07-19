@@ -3,6 +3,8 @@ import { Home } from '../components/Home/Home';
 import { About } from '../components/About/About';
 import { Skills } from '../components/Skills/Skills';
 import { Project } from '../components/Projects/Project';
+import { Terminal } from '../components/Terminal/Terminal';
+import { Connect } from '../components/Connect/Connect';
 
 export const LandingPage = () => {
   return (
@@ -17,6 +19,8 @@ export const LandingPage = () => {
       <About />
       <Skills />
       <Project />
+      <Terminal />
+      <Connect />
     </Container>
   );
 };

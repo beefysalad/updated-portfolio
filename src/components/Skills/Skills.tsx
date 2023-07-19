@@ -39,7 +39,7 @@ export const Skills = () => {
           }
           transition={{ duration: '0.5' }}
         >
-          <Heading>Skills</Heading>
+          <Heading textAlign={'center'}>Skills</Heading>
           <Text textAlign={'center'}>My Technical Skills</Text>
         </motion.div>
         <HStack w='100%' flexDirection={{ base: 'column', md: 'row' }}>
@@ -101,7 +101,7 @@ export const Skills = () => {
                   </CustomAccordionItems>
                   <CustomAccordionItems
                     skillName='CSS'
-                    progressValue={70}
+                    progressValue={75}
                     margin={true}
                   >
                     <svg
@@ -252,7 +252,7 @@ export const Skills = () => {
                     </svg>
                   </CustomAccordionItems>
                   <CustomAccordionItems
-                    progressValue={70}
+                    progressValue={80}
                     skillName='Express.js'
                     margin={true}
                   >
@@ -275,14 +275,14 @@ export const Skills = () => {
                     </svg>
                   </CustomAccordionItems>
                   <CustomAccordionItems
-                    progressValue={75}
+                    progressValue={65}
                     skillName='Nest.js'
                     margin={true}
                   >
                     <img src={nest} width={48} height={48} />
                   </CustomAccordionItems>
                   <CustomAccordionItems
-                    progressValue={70}
+                    progressValue={65}
                     skillName='PostgreSQL'
                     margin={true}
                   >
@@ -313,7 +313,7 @@ export const Skills = () => {
                     </svg>
                   </CustomAccordionItems>
                   <CustomAccordionItems
-                    progressValue={60}
+                    progressValue={58}
                     skillName='Prisma '
                     margin={true}
                   >
