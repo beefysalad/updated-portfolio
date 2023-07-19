@@ -20,12 +20,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 export const Skills = () => {
   const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
-  const ref = useRef(null);
-  const inView = useInView(ref);
-  const ref2 = useRef(null);
-  const inView2 = useInView(ref);
-  const ref3 = useRef(null);
-  const inView3 = useInView(ref);
+
   return (
     <Box w={{ base: '100%', md: '70%' }} color={bg} id='skills'>
       <VStack mt={50} w='100%' flexDirection={{ base: 'column', md: 'column' }}>
@@ -35,13 +30,6 @@ export const Skills = () => {
         
         <HStack w='100%' flexDirection={{ base: 'column', md: 'row' }}>
           <Box
-            ref={ref2}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={
-              inView2 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
-            }
-            as={motion.div}
-            transition={{ duration: '0.5' }}
             w={{ base: '100%', md: '50%' }}
           >
             <Accordion allowToggle={false} defaultIndex={[0]}>
@@ -195,13 +183,6 @@ export const Skills = () => {
           </Box>
 
           <Box
-            ref={ref3}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={
-              inView3 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
-            }
-            as={motion.div}
-            transition={{ duration: '0.5' }}
             w={{ base: '100%', md: '50%' }}
           >
             <Accordion allowToggle={false} defaultIndex={[0]}>
