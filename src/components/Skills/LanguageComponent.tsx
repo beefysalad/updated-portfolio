@@ -1,26 +1,37 @@
 import { Box, Tooltip } from '@chakra-ui/react';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 interface LanguageProps {
   children: React.ReactNode;
   label: string;
 }
 
 export const LanguageComponent = ({ children, label }: LanguageProps) => {
+  const [isSpinning, setIsSpinning] = useState<boolean>(false);
+
+  const handleMouseEnter = () => {
+    setIsSpinning(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsSpinning(false);
+  };
+
   return (
     <Box
       width={'50px'}
       height={'50px'}
       borderRadius={'50%'}
-      _hover={{ transform: 'scale(1.2)' }}
-      transition={'0.2s'}
       flexDirection={'row'}
       justifyContent={'center'}
       boxShadow={'lg'}
       cursor={'pointer'}
       p={'auto'}
       as={motion.div}
-      whileTap={{ scale: 2 }}
+      animate={{ rotate: isSpinning ? 360 : 0 }}
+      transition={{ duration: '0.2', ease: 'linear' }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <Tooltip label={label} hasArrow>
         {children}

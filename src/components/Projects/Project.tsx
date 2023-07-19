@@ -22,13 +22,21 @@ import todogif from '../../assets/todo.gif';
 import temsgif from '../../assets/temsgif.gif';
 import friendsbook from '../../assets/friendsbook.png';
 import fb from '../../assets/fb.gif';
-
+import TypeWriter from 'typewriter-effect';
 export const Project = () => {
   const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
   return (
     <Box w={{ base: '100%', md: '70%' }} color={bg} id='projects' mt='150px'>
       <VStack>
-        <Heading mb='100px'>Projects</Heading>
+        <Heading mb='100px' size={'3xl'}>
+          <TypeWriter
+            options={{
+              strings: ['Projects'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </Heading>
 
         <Stack
           justifyContent={'space-between'}
