@@ -29,17 +29,10 @@ export const Skills = () => {
   return (
     <Box w={{ base: '100%', md: '70%' }} color={bg} id='skills'>
       <VStack mt={50} w='100%' flexDirection={{ base: 'column', md: 'column' }}>
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={
-            inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
-          }
-          transition={{ duration: 0.5 }} // Animation duration
-        >
+       
           <Heading>Skills</Heading>
           <Text>My Technical Skills</Text>
-        </motion.div>
+        
         <HStack w='100%' flexDirection={{ base: 'column', md: 'row' }}>
           <Box
             ref={ref2}
