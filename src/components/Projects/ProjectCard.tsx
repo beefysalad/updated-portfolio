@@ -26,7 +26,7 @@ import avatar from '../../assets/bg-pic.png';
 import { FaGithub } from 'react-icons/fa';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-
+import { CgMediaPodcast } from 'react-icons/cg';
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -165,7 +165,7 @@ export const ProjectCard = ({
               )}
               {demo && (
                 <Button
-                  leftIcon={<FaGithub />}
+                  leftIcon={<CgMediaPodcast />}
                   variant={'outline'}
                   colorScheme='teal'
                   as={Link}
