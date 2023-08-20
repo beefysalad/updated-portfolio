@@ -26,9 +26,11 @@ export const About = () => {
   const ref = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
+  const ref4 = useRef(null);
   const inView = useInView(ref);
-  const inView2 = useInView(ref);
-  const inView3 = useInView(ref);
+  const inView2 = useInView(ref2);
+  const inView3 = useInView(ref3);
+  const inView4 = useInView(ref4);
   const handleDownload = () => {
     const fileId = '1w5mDd46XK6ZuOFg28yDyy1XOdTqA5xu8';
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
@@ -182,6 +184,45 @@ export const About = () => {
             {' '}
             <Icon color={color} boxSize={5} as={FaCalendar} />
             <p>June - August 2022</p>
+          </HStack>
+        </VStack>
+      </motion.div>
+      <motion.div
+        ref={ref4}
+        initial={{ opacity: 0, x: 0 }}
+        animate={inView4 ? { opacity: 1, x: -1 } : { opacity: 0, x: 0 }}
+        transition={{ duration: 0.7 }} // Animation duration
+      >
+        <VStack alignItems={{ base: 'center', md: 'flex-end' }} mt={'80px'}>
+          <Flex
+            flexDir={{ base: 'column-reverse', md: 'row' }} // Flex direction changes to 'column-reverse' on small screens and 'row' on medium screens and above
+            alignItems='center' // Align items vertically in the center
+            justifyContent='center' // Center the children horizontally
+          >
+            <Heading size={'xl'} textAlign={'center'}>
+              <TypeWriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString('Experience')
+                    .callFunction(() => {
+                      console.log('String typed out!');
+                    })
+                    .pauseFor(2500)
+                    .start();
+                }}
+              />
+            </Heading>
+            <Icon boxSize={7} as={MdWork} />
+          </Flex>
+          <Text textAlign={{ base: 'center' }}>Alliance Software Inc.</Text>
+          <Code fontSize={'md'} color={color} textAlign={'center'}>
+            Technical Specialist - Software Developer
+          </Code>
+          <Badge variant='outline'>Full Time</Badge>
+          <HStack as={Flex}>
+            <Text order={{ base: 1, md: 0 }}>August - Present</Text>
+
+            <Icon color={color} boxSize={5} as={FaCalendar} />
           </HStack>
         </VStack>
       </motion.div>
