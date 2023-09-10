@@ -95,6 +95,7 @@ export const About = () => {
             </Code>
             .
           </Text>
+
           <Button
             mt={10}
             variant={'outline'}

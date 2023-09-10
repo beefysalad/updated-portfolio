@@ -183,23 +183,40 @@ export const Skills = () => {
                     </svg>
                   </CustomAccordionItems>
                   <CustomAccordionItems
-                    skillName='Chakra UI'
-                    progressValue={60}
+                    skillName='Angular TypeScript'
+                    progressValue={30}
                     margin={true}
                   >
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       x='0px'
                       y='0px'
-                      width='48'
-                      height='48'
+                      width='45'
+                      height='45'
                       viewBox='0 0 48 48'
                     >
-                      <circle cx='24' cy='24' r='20' fill='#4db6ac'></circle>
                       <path
-                        fill='#fff'
-                        d='M33.357,21.5h-8.882c-0.187,0-0.308-0.198-0.222-0.365l5.03-9.745	c0.13-0.253-0.195-0.492-0.398-0.293l-14.2,13.974c-0.159,0.157-0.048,0.428,0.175,0.428H24.2c0.202,0,0.32,0.227,0.205,0.393	l-7.126,10.265c-0.17,0.245,0.154,0.528,0.374,0.327l15.873-14.55C33.694,21.78,33.585,21.5,33.357,21.5z'
+                        fill='#bdbdbd'
+                        d='M23.933 2L3 9.285 6.308 36.408 23.955 46 41.693 36.278 45 9.156z'
                       ></path>
+                      <path
+                        fill='#b71c1c'
+                        d='M42.818 10.527L24 4.135 24 43.695 39.832 35.017z'
+                      ></path>
+                      <path
+                        fill='#dd2c00'
+                        d='M23.941 4.115L5.181 10.644 8.168 35.143 23.951 43.721 24 43.695 24 4.135z'
+                      ></path>
+                      <path
+                        fill='#bdbdbd'
+                        d='M24 5.996L24 15.504 32.578 34 36.987 34z'
+                      ></path>
+                      <path
+                        fill='#eee'
+                        d='M11.013 34L15.422 34 24 15.504 24 5.996z'
+                      ></path>
+                      <path fill='#bdbdbd' d='M24 24H30V28H24z'></path>
+                      <path fill='#eee' d='M18 24H24V28H18z'></path>
                     </svg>
                   </CustomAccordionItems>
                 </AccordionPanel>
