@@ -62,7 +62,7 @@ export const About = () => {
           </Heading>
           <Spacer />
           <Text textAlign={'justify'}>
-            I am an aspiring{' '}
+            I am a{' '}
             <Code fontSize={'md'} color={color}>
               Software Engineer
             </Code>{' '}
