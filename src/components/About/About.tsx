@@ -20,6 +20,7 @@ import { MdWork } from 'react-icons/md';
 import TypeWriter from 'typewriter-effect';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import * as moment from 'moment';
 export const About = () => {
   const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
   const color = useColorModeValue('black', '#64ffda');
@@ -41,7 +42,6 @@ export const About = () => {
     link.click();
     document.body.removeChild(link);
   };
-
   return (
     <Box w={{ base: '100%', md: '70%' }} color={bg} id='about' mt='300px'>
       <motion.div
@@ -221,8 +221,7 @@ export const About = () => {
           </Code>
           <Badge variant='outline'>Full Time</Badge>
           <HStack as={Flex}>
-            <Text order={{ base: 1, md: 0 }}>August - Present</Text>
-
+            <Text order={{ base: 1, md: 0 }}>August - Present ({(moment as any)('2023-08-14').fromNow(true)})</Text>
             <Icon color={color} boxSize={5} as={FaCalendar} />
           </HStack>
         </VStack>
