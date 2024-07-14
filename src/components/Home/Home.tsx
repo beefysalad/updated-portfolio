@@ -13,22 +13,22 @@ import {
   VStack,
   useColorModeValue,
   keyframes,
-} from '@chakra-ui/react';
-import logo from '../../assets/newbg.png';
-import TypeWriter from 'typewriter-effect';
-import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+} from "@chakra-ui/react";
+import logo from "../../assets/newbg.png";
+import TypeWriter from "typewriter-effect";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
 export const Home = () => {
-  const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
-  const color = useColorModeValue('black', '#64ffda');
+  const bg = useColorModeValue("rgb(9,24,47)", "gray.50");
+  const color = useColorModeValue("black", "#64ffda");
 
   const ref = useRef(null);
 
   const inView = useInView(ref);
 
   return (
-    <Box w={{ base: '100%', md: '100%' }} color={bg} id='home'>
+    <Box w={{ base: "100%", md: "100%" }} color={bg} id='home'>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, scale: 0.8 }}
@@ -36,22 +36,22 @@ export const Home = () => {
         transition={{ duration: 0.5 }} // Animation duration
       >
         <Stack
-          direction={{ base: 'column', md: 'row' }}
-          justifyContent={{ base: 'center', md: 'space-evenly' }}
-          alignItems={'center'}
+          direction={{ base: "column", md: "row" }}
+          justifyContent={{ base: "center", md: "space-evenly" }}
+          alignItems={"center"}
         >
-          <Image src={logo} boxSize={{ base: '50%', md: '25%' }} />
+          <Image src={logo} boxSize={{ base: "50%", md: "25%" }} />
 
-          <Box maxW={{ base: '70%', md: '30%' }}>
-            <VStack style={{ alignItems: 'flex-start' }} spacing={2}>
-              <Heading size={'xl'} textAlign={'center'}>
+          <Box maxW={{ base: "70%", md: "30%" }}>
+            <VStack style={{ alignItems: "flex-start" }} spacing={2}>
+              <Heading size={"xl"} textAlign={"center"}>
                 <TypeWriter
                   options={{
                     strings: [
-                      'John Patrick Ryan Mandal',
-                      'Patrick',
-                      'Ryan',
-                      'JP',
+                      "John Patrick Ryan Mandal",
+                      "Patrick",
+                      "Ryan",
+                      "JP",
                     ],
                     autoStart: true,
                     loop: true,
@@ -61,26 +61,26 @@ export const Home = () => {
               <Spacer />
               <Box
                 w='100%'
-                display={'flex'}
-                justifyContent={{ base: 'center', md: 'flex-start' }}
+                display={"flex"}
+                justifyContent={{ base: "center", md: "flex-start" }}
               >
                 <Code
-                  textAlign={'center'}
+                  textAlign={"center"}
                   color={color}
-                  fontSize={{ base: 'lg', md: 'xl' }}
+                  fontSize={{ base: "lg", md: "xl" }}
                 >
                   Computer Engineer
                 </Code>
               </Box>
 
               <Spacer />
-              <Text textAlign={'justify'}>
+              <Text textAlign={"justify"}>
                 a passionate computer engineer with a strong interest in
                 developing top-notch solutions for real-world problems.
               </Text>
               <HStack
                 w='100%'
-                justifyContent={{ base: 'center', md: 'flex-start' }}
+                justifyContent={{ base: "center", md: "flex-start" }}
               >
                 <a
                   target='_blank'
@@ -88,8 +88,8 @@ export const Home = () => {
                   rel='noreferrer'
                 >
                   <Icon
-                    cursor={'pointer'}
-                    _hover={{ transform: 'translateY(-5px)' }}
+                    cursor={"pointer"}
+                    _hover={{ transform: "translateY(-5px)" }}
                     transition='transform 0.3s'
                     color={color}
                     boxSize={8}
@@ -102,8 +102,8 @@ export const Home = () => {
                   rel='noreferrer'
                 >
                   <Icon
-                    cursor={'pointer'}
-                    _hover={{ transform: 'translateY(-7px)' }}
+                    cursor={"pointer"}
+                    _hover={{ transform: "translateY(-7px)" }}
                     transition='transform 0.3s'
                     color={color}
                     boxSize={8}
@@ -115,10 +115,10 @@ export const Home = () => {
                   href='https://www.facebook.com/Jpatrickzxc/'
                   rel='noreferrer'
                 >
-                  {' '}
+                  {" "}
                   <Icon
-                    cursor={'pointer'}
-                    _hover={{ transform: 'translateY(-9px)' }}
+                    cursor={"pointer"}
+                    _hover={{ transform: "translateY(-9px)" }}
                     transition='transform 0.3s'
                     color={color}
                     boxSize={8}
@@ -131,7 +131,7 @@ export const Home = () => {
           </Box>
         </Stack>
       </motion.div>
-      <Flex justifyContent={'center'} mt='15vh'>
+      <Flex justifyContent={"center"} mt='15vh'>
         <Divider w='70%' />
       </Flex>
     </Box>

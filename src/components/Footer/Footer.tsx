@@ -14,14 +14,14 @@ import {
   useColorModeValue,
   Kbd,
   Code,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 interface FooterProps {
   children?: React.ReactNode;
 }
 const Footer = ({ children }: FooterProps) => {
-  const bg = useColorModeValue('gray.50', 'rgb(9,24,47)');
-  const color = useColorModeValue('black', '#64ffda');
+  const bg = useColorModeValue("gray.50", "rgb(9,24,47)");
+  const color = useColorModeValue("black", "#64ffda");
   return (
     <Box
       w='100%'
@@ -30,24 +30,24 @@ const Footer = ({ children }: FooterProps) => {
       bg={bg}
       mt={50}
       as={Flex}
-      flexDirection={'column'}
-      justifyContent={'space-between'}
-      boxShadow={'lg'}
+      flexDirection={"column"}
+      justifyContent={"space-between"}
+      boxShadow={"lg"}
     >
-      <Flex justifyContent={'center'}>
-        <VStack mt='30px' textAlign={'center'}>
+      <Flex justifyContent={"center"}>
+        <VStack mt='30px' textAlign={"center"}>
           <Text>
-            Just like me, this website will continue to evolve.{' '}
+            Just like me, this website will continue to evolve.{" "}
             <span>
               <Code color={color}>Never Static</Code>
             </span>
             .
           </Text>
-          <Text fontSize={'xs'}>
+          <Text fontSize={"xs"}>
             Built with React, TypeScript, Chakra UI and ☕️🔥
           </Text>
-          <Text fontSize={'xs'}>Copyright © Saladu 2023</Text>
-          <Text fontSize={'10'}>Last Updated Novjmber 12, 2023</Text>
+          <Text fontSize={"xs"}>Copyright © Saladu 2023</Text>
+          <Text fontSize={"10"}>Last Updated July 14, 2024</Text>
         </VStack>
       </Flex>
     </Box>
