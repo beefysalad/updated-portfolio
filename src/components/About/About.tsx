@@ -217,11 +217,11 @@ export const About = () => {
           </Flex>
           <Text textAlign={{ base: 'center' }}>Alliance Software Inc.</Text>
           <Code fontSize={'md'} color={color} textAlign={'center'}>
-            Technical Specialist - Software Developer
+            Technical Specialist - Software Engineer
           </Code>
           <Badge variant='outline'>Full Time</Badge>
           <HStack as={Flex}>
-            <Text order={{ base: 1, md: 0 }}>August - Present ({(moment as any)('2023-08-14').fromNow(true)})</Text>
+            <Text order={{ base: 1, md: 0 }}> August - Present ({(moment as any)('2023-08-14').fromNow(true)})</Text>
             <Icon color={color} boxSize={5} as={FaCalendar} />
           </HStack>
         </VStack>

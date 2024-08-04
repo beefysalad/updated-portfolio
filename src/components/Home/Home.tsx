@@ -14,7 +14,7 @@ import {
   useColorModeValue,
   keyframes,
 } from "@chakra-ui/react";
-import logo from "../../assets/newbg.png";
+import logo from "../../assets/newnew.png";
 import TypeWriter from "typewriter-effect";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
@@ -69,7 +69,7 @@ export const Home = () => {
                   color={color}
                   fontSize={{ base: "lg", md: "xl" }}
                 >
-                  Computer Engineer
+                  Software Engineer
                 </Code>
               </Box>
 
