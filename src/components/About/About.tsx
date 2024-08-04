@@ -13,17 +13,17 @@ import {
   Text,
   VStack,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { FaCalendar } from 'react-icons/fa';
-import { GoMortarBoard } from 'react-icons/go';
-import { MdWork } from 'react-icons/md';
-import TypeWriter from 'typewriter-effect';
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import * as moment from 'moment';
+} from "@chakra-ui/react";
+import { FaCalendar } from "react-icons/fa";
+import { GoMortarBoard } from "react-icons/go";
+import { MdWork } from "react-icons/md";
+import TypeWriter from "typewriter-effect";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import * as moment from "moment";
 export const About = () => {
-  const bg = useColorModeValue('rgb(9,24,47)', 'gray.50');
-  const color = useColorModeValue('black', '#64ffda');
+  const bg = useColorModeValue("rgb(9,24,47)", "gray.50");
+  const color = useColorModeValue("black", "#64ffda");
   const ref = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
@@ -33,64 +33,64 @@ export const About = () => {
   const inView3 = useInView(ref3);
   const inView4 = useInView(ref4);
   const handleDownload = () => {
-    const fileId = '1w5mDd46XK6ZuOFg28yDyy1XOdTqA5xu8';
+    const fileId = "1w5mDd46XK6ZuOFg28yDyy1XOdTqA5xu8";
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = downloadUrl;
-    link.setAttribute('download', 'Mandal.pdf');
+    link.setAttribute("download", "Mandal.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
   return (
-    <Box w={{ base: '100%', md: '70%' }} color={bg} id='about' mt='300px'>
+    <Box w={{ base: "100%", md: "70%" }} color={bg} id='about' mt='300px'>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, x: 0 }}
         animate={inView ? { opacity: 1, x: -1 } : { opacity: 0, x: 0 }}
         transition={{ duration: 0.7 }} // Animation duration
       >
-        <VStack alignItems={{ base: 'center', md: 'flex-start' }}>
-          <Heading size={'3xl'} textAlign={'center'}>
+        <VStack alignItems={{ base: "center", md: "flex-start" }}>
+          <Heading size={"3xl"} textAlign={"center"}>
             <TypeWriter
               options={{
-                strings: ['Bio', 'About Me', 'Who am I ?'],
+                strings: ["Bio", "About Me", "Who am I ?"],
                 autoStart: true,
                 loop: true,
               }}
             />
           </Heading>
           <Spacer />
-          <Text textAlign={'justify'}>
-            I am a{' '}
-            <Code fontSize={'md'} color={color}>
+          <Text textAlign={"justify"}>
+            I am a{" "}
+            <Code fontSize={"md"} color={color}>
               Software Engineer
-            </Code>{' '}
+            </Code>{" "}
             with fullstack web development skills based in Cebu, Philippines.
           </Text>
           <Spacer />
-          <Text textAlign={'justify'}>
+          <Text textAlign={"justify"}>
             As a graduate of Bachelor of Science in Computer Engineering, I am
             dedicated to building innovative and dynamic web applications that
             exceed expectations. With a strong foundation in HTML, CSS, and
-            JavaScript, My tech stack includes but not limited to{' '}
-            <Code fontSize={'md'} color={color}>
+            JavaScript, My tech stack includes but not limited to{" "}
+            <Code fontSize={"md"} color={color}>
               Nest.js
             </Code>
-            ,{' '}
-            <Code fontSize={'md'} color={color}>
+            ,{" "}
+            <Code fontSize={"md"} color={color}>
               React
-            </Code>{' '}
-            with{' '}
-            <Code fontSize={'md'} color={color}>
+            </Code>{" "}
+            with{" "}
+            <Code fontSize={"md"} color={color}>
               TypeScript
             </Code>
-            , and{' '}
-            <Code fontSize={'md'} color={color}>
+            , and{" "}
+            <Code fontSize={"md"} color={color}>
               MySQL
-            </Code>{' '}
-            with{' '}
-            <Code fontSize={'md'} color={color}>
+            </Code>{" "}
+            with{" "}
+            <Code fontSize={"md"} color={color}>
               Prisma ORM
             </Code>
             .
@@ -98,10 +98,10 @@ export const About = () => {
 
           <Button
             mt={10}
-            variant={'outline'}
+            variant={"outline"}
             colorScheme='teal'
             onClick={handleDownload}
-            _hover={{ transform: 'translateX(-5px)', textDecoration: 'none' }}
+            _hover={{ transform: "translateX(-5px)", textDecoration: "none" }}
             transition='transform 0.3s'
           >
             Download CV
@@ -114,19 +114,19 @@ export const About = () => {
         animate={inView2 ? { opacity: 1, x: -1 } : { opacity: 0, x: 0 }}
         transition={{ duration: 0.7 }} // Animation duration
       >
-        <VStack alignItems={{ base: 'center', md: 'flex-end' }} mt={'80px'}>
+        <VStack alignItems={{ base: "center", md: "flex-end" }} mt={"80px"}>
           <Flex
-            flexDir={{ base: 'column-reverse', md: 'row' }} // Flex direction changes to 'column-reverse' on small screens and 'row' on medium screens and above
+            flexDir={{ base: "column-reverse", md: "row" }} // Flex direction changes to 'column-reverse' on small screens and 'row' on medium screens and above
             alignItems='center' // Align items vertically in the center
             justifyContent='center' // Center the children horizontally
           >
-            <Heading size={'xl'} textAlign={'center'}>
+            <Heading size={"xl"} textAlign={"center"}>
               <TypeWriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('Education')
+                    .typeString("Education")
                     .callFunction(() => {
-                      console.log('String typed out!');
+                      console.log("String typed out!");
                     })
                     .pauseFor(2500)
                     .start();
@@ -135,10 +135,10 @@ export const About = () => {
             </Heading>
             <Icon boxSize={7} as={GoMortarBoard} />
           </Flex>
-          <Text textAlign={{ base: 'center' }}>
+          <Text textAlign={{ base: "center" }}>
             Cebu Institute of Technology - University
           </Text>
-          <Code fontSize={'md'} color={color} textAlign={'center'}>
+          <Code fontSize={"md"} color={color} textAlign={"center"}>
             Bachelor of Science in Computer Engineering
           </Code>
           <Badge variant='outline'>College</Badge>
@@ -155,20 +155,20 @@ export const About = () => {
         animate={inView3 ? { opacity: 1, x: -1 } : { opacity: 0, x: 0 }}
         transition={{ duration: 0.7 }} // Animation duration
       >
-        <VStack alignItems={{ base: 'center', md: 'flex-start' }} mt={'50px'}>
+        <VStack alignItems={{ base: "center", md: "flex-start" }} mt={"50px"}>
           <Flex
-            flexDir={{ base: 'column-reverse', md: 'row' }} // Flex direction changes to 'column-reverse' on small screens and 'row' on medium screens and above
+            flexDir={{ base: "column-reverse", md: "row" }} // Flex direction changes to 'column-reverse' on small screens and 'row' on medium screens and above
             alignItems='center' // Align items vertically in the center
             justifyContent='center' // Center the children horizontally
           >
             <Icon order={{ base: 1, md: 0 }} boxSize={7} as={MdWork} />
-            <Heading size={'xl'} textAlign={'center'}>
+            <Heading size={"xl"} textAlign={"center"}>
               <TypeWriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('Experience')
+                    .typeString("Experience")
                     .callFunction(() => {
-                      console.log('String typed out!');
+                      console.log("String typed out!");
                     })
                     .pauseFor(2500)
                     .start();
@@ -177,12 +177,12 @@ export const About = () => {
             </Heading>
           </Flex>
           <Text>Sprobe Inc.</Text>
-          <Code fontSize={'md'} color={color} textAlign={'center'}>
+          <Code fontSize={"md"} color={color} textAlign={"center"}>
             Fullstack Web Developer
           </Code>
           <Badge variant='outline'>Internship</Badge>
           <HStack>
-            {' '}
+            {" "}
             <Icon color={color} boxSize={5} as={FaCalendar} />
             <p>June - August 2022</p>
           </HStack>
@@ -194,19 +194,19 @@ export const About = () => {
         animate={inView4 ? { opacity: 1, x: -1 } : { opacity: 0, x: 0 }}
         transition={{ duration: 0.7 }} // Animation duration
       >
-        <VStack alignItems={{ base: 'center', md: 'flex-end' }} mt={'80px'}>
+        <VStack alignItems={{ base: "center", md: "flex-end" }} mt={"80px"}>
           <Flex
-            flexDir={{ base: 'column-reverse', md: 'row' }} // Flex direction changes to 'column-reverse' on small screens and 'row' on medium screens and above
+            flexDir={{ base: "column-reverse", md: "row" }} // Flex direction changes to 'column-reverse' on small screens and 'row' on medium screens and above
             alignItems='center' // Align items vertically in the center
             justifyContent='center' // Center the children horizontally
           >
-            <Heading size={'xl'} textAlign={'center'}>
+            <Heading size={"xl"} textAlign={"center"}>
               <TypeWriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('Experience')
+                    .typeString("Experience")
                     .callFunction(() => {
-                      console.log('String typed out!');
+                      console.log("String typed out!");
                     })
                     .pauseFor(2500)
                     .start();
@@ -215,13 +215,17 @@ export const About = () => {
             </Heading>
             <Icon boxSize={7} as={MdWork} />
           </Flex>
-          <Text textAlign={{ base: 'center' }}>Alliance Software Inc.</Text>
-          <Code fontSize={'md'} color={color} textAlign={'center'}>
+          <Text textAlign={{ base: "center" }}>Alliance Software Inc.</Text>
+          <Code fontSize={"md"} color={color} textAlign={"center"}>
             Technical Specialist - Software Engineer
           </Code>
           <Badge variant='outline'>Full Time</Badge>
           <HStack as={Flex}>
-            <Text order={{ base: 1, md: 0 }}> August - Present ({(moment as any)('2023-08-14').fromNow(true)})</Text>
+            <Text order={{ base: 1, md: 0 }}>
+              {" "}
+              August (2023) - Present (
+              {(moment as any)("2023-08-14").fromNow(true)})
+            </Text>
             <Icon color={color} boxSize={5} as={FaCalendar} />
           </HStack>
         </VStack>
