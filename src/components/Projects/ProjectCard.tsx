@@ -21,12 +21,12 @@ import {
   Text,
   Wrap,
   WrapItem,
-} from '@chakra-ui/react';
-import avatar from '../../assets/bg-pic.png';
-import { FaGithub } from 'react-icons/fa';
-import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { CgMediaPodcast } from 'react-icons/cg';
+} from "@chakra-ui/react";
+import avatar from "../../assets/bg-pic.png";
+import { FaGithub } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import { CgMediaPodcast } from "react-icons/cg";
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -69,17 +69,16 @@ export const ProjectCard = ({
       animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
       whileHover={{
         scale: 1.05,
-        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2)',
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
       }}
-      whileTap={{ scale: 1.3 }}
       transition={{ duration: 0.2 }} // Animation duration
     >
-      <Card maxW={{ base: '320px', md: 'xl' }} w='100%' borderRadius={'lg'}>
+      <Card maxW={{ base: "320px", md: "xl" }} w='100%' borderRadius={"lg"}>
         <CardBody
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Heading size='lg' textAlign={'center'} mb='5'>
+          <Heading size='lg' textAlign={"center"} mb='5'>
             {title}
           </Heading>
           {isHovered && gif ? (
@@ -87,27 +86,27 @@ export const ProjectCard = ({
               src={gif}
               alt='GIF'
               borderRadius='lg'
-              width={'100%'}
-              height={'250'}
+              width={"100%"}
+              height={"250"}
             />
           ) : (
             <Image
               src={image}
               alt={`${title} Image`}
               borderRadius='lg'
-              width={'100%'}
-              height={'250'}
+              width={"100%"}
+              height={"250"}
             />
           )}
           <Stack mt='6' spacing='3'>
-            <Text textAlign={'center'}>{description}</Text>
+            <Text textAlign={"center"}>{description}</Text>
             <Divider />
             <Center>
               <Wrap spacing={2} justify='center'>
                 {tags.map((tag) => (
                   <WrapItem key={tag}>
                     <Tag
-                      cursor={'pointer'}
+                      cursor={"pointer"}
                       size='md'
                       borderRadius='full'
                       colorScheme='teal'
@@ -120,7 +119,7 @@ export const ProjectCard = ({
                 {type.map((type) => (
                   <WrapItem key={type}>
                     <Tag
-                      cursor={'pointer'}
+                      cursor={"pointer"}
                       size='md'
                       borderRadius='full'
                       colorScheme='red'
@@ -132,7 +131,7 @@ export const ProjectCard = ({
               </Wrap>
             </Center>
             <Center>
-              {' '}
+              {" "}
               <Tag size='lg' colorScheme='green' borderRadius='full'>
                 <Avatar
                   src={avatar}
@@ -145,7 +144,7 @@ export const ProjectCard = ({
               </Tag>
             </Center>
 
-            <HStack justifyContent={'space-evenly'}>
+            <HStack justifyContent={"space-evenly"}>
               {repo && (
                 <Button
                   leftIcon={<FaGithub />}
@@ -154,8 +153,8 @@ export const ProjectCard = ({
                   as={Link}
                   href={repo}
                   _hover={{
-                    transform: 'translateX(-5px)',
-                    textDecoration: 'none',
+                    transform: "translateX(-5px)",
+                    textDecoration: "none",
                   }}
                   transition='transform 0.3s'
                   target='_blank'
@@ -166,13 +165,13 @@ export const ProjectCard = ({
               {demo && (
                 <Button
                   leftIcon={<CgMediaPodcast />}
-                  variant={'outline'}
+                  variant={"outline"}
                   colorScheme='teal'
                   as={Link}
                   href={demo}
                   _hover={{
-                    transform: 'translateX(5px)',
-                    textDecoration: 'none',
+                    transform: "translateX(5px)",
+                    textDecoration: "none",
                   }}
                   transition='transform 0.3s'
                   target='_blank'

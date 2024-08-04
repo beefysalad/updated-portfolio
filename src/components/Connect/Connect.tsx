@@ -13,14 +13,62 @@ import {
   VStack,
   useBreakpointValue,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
 import { FaLinkedin } from "react-icons/fa";
 import { MdCall, MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import axios from "axios";
 export const Connect = () => {
   const bg = useColorModeValue("rgb(9,24,47)", "gray.50");
   const color = useColorModeValue("black", "#64ffda");
   const marginTopBase = useBreakpointValue({ base: "20px", md: "0" });
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const API_URL = process.env.REACT_APP_API_URL;
+  const toast = useToast();
+  const handleButtonSubmit = async () => {
+    const mailOptionPayload = {
+      name: name || "private",
+      email: email || "private",
+      message: message,
+    };
+    if (message.length === 0) {
+      toast({
+        title: "Missing fields!",
+        description: "One of the required fields is missing",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+      return;
+    }
+    try {
+      const response = axios.post(`${API_URL}/send-email`, mailOptionPayload);
+      toast.promise(response, {
+        loading: {
+          title: "Sending email...",
+          description: "Please wait while we send your email.",
+        },
+        success: {
+          title: "Email sent!",
+          description: "Your message has been sent successfully.",
+        },
+        error: {
+          title: "Email failed to send.",
+          description: "There was an error sending your message.",
+        },
+      });
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <Box
       id={"connect"}
@@ -90,19 +138,33 @@ export const Connect = () => {
             <Spacer />
             <Box w='100%' style={{ marginTop: marginTopBase }}>
               <VStack>
-                <Input placeholder='Your Name (optional)' variant='filled' />
+                <Input
+                  placeholder='Your Name (optional)'
+                  variant='filled'
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                />
                 <Input
                   type='email'
                   placeholder='Your Email (optional)'
                   variant='filled'
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                 />
                 <Textarea
                   placeholder='Your Message'
                   variant='filled'
                   resize={"none"}
+                  onChange={(e) => setMessage(e.target.value)}
+                  value={message}
                 />
               </VStack>
-              <Button variant='outline' colorScheme='teal' mt={5}>
+              <Button
+                variant='outline'
+                colorScheme='teal'
+                mt={5}
+                onClick={handleButtonSubmit}
+              >
                 Submit
               </Button>
             </Box>
