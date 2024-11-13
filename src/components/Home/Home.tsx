@@ -14,7 +14,7 @@ import {
   useColorModeValue,
   keyframes,
 } from "@chakra-ui/react";
-import logo from "../../assets/newnew.png";
+import logo from "../../assets/newb2g.png";
 import TypeWriter from "typewriter-effect";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
