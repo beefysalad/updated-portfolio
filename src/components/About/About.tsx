@@ -33,7 +33,7 @@ export const About = () => {
   const inView3 = useInView(ref3);
   const inView4 = useInView(ref4);
   const handleDownload = () => {
-    const fileId = "1w5mDd46XK6ZuOFg28yDyy1XOdTqA5xu8";
+    const fileId = "12B67CEcbKpZzXOE3eUu1WciBn_RcyfTi";
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
     const link = document.createElement("a");
     link.href = downloadUrl;
