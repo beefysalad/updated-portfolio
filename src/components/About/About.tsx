@@ -33,7 +33,7 @@ export const About = () => {
   const inView3 = useInView(ref3);
   const inView4 = useInView(ref4);
   const handleDownload = () => {
-    const fileId = "12B67CEcbKpZzXOE3eUu1WciBn_RcyfTi";
+    const fileId = "1KUJeMxuT3HhO7KxW8tJiEv3WlctQP_Oo";
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
     const link = document.createElement("a");
     link.href = downloadUrl;
@@ -223,8 +223,8 @@ export const About = () => {
           <HStack as={Flex}>
             <Text order={{ base: 1, md: 0 }}>
               {" "}
-              August (2023) - Present (
-              {(moment as any)("2023-08-14").fromNow(true)})
+              July 2023 - Present ({(moment as any)("2023-08-14").fromNow(true)}
+              )
             </Text>
             <Icon color={color} boxSize={5} as={FaCalendar} />
           </HStack>

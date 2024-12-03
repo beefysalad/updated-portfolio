@@ -5,7 +5,7 @@ import {
   Icon,
   useColorModeValue,
   useBreakpointValue,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import {
   FaFacebook,
   FaGithub,
@@ -13,12 +13,12 @@ import {
   FaLinkedin,
   FaTwitter,
   FaReddit,
-} from 'react-icons/fa';
-import { useState, useEffect } from 'react';
+} from "react-icons/fa";
+import { useState, useEffect } from "react";
 export const FloatingSocialBar = () => {
-  const color = useColorModeValue('black', '#64ffda');
-  const boxShadowValue = useColorModeValue('gray.50', 'rgba(9,24,47,0.1)');
-  const [bottomPosition, setBottomPosition] = useState('-240px');
+  const color = useColorModeValue("black", "#64ffda");
+  const boxShadowValue = useColorModeValue("gray.50", "rgba(9,24,47,0.1)");
+  const [bottomPosition, setBottomPosition] = useState("-240px");
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const isMobile = useBreakpointValue({ base: true, md: false });
 
@@ -36,19 +36,19 @@ export const FloatingSocialBar = () => {
           -(
             barHeight *
             (1 - Math.pow(scrollProgress, scrollSpeedFactor))
-          ).toFixed(0) + 'px';
+          ).toFixed(0) + "px";
         setBottomPosition(newBottomPosition);
         setIsVisible(true);
       } else {
-        setBottomPosition(maxBottomPosition + 'px');
+        setBottomPosition(maxBottomPosition + "px");
         setIsVisible(false);
       }
     };
 
     handleScroll();
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -60,16 +60,16 @@ export const FloatingSocialBar = () => {
       position='fixed'
       bottom={bottomPosition}
       w='50px'
-      h='240px'
-      marginLeft={'50px'}
-      borderRadius={'3xl'}
+      h='160px'
+      marginLeft={"50px"}
+      borderRadius={"3xl"}
       outline={`1px solid ${color}`}
       bg={boxShadowValue}
-      boxShadow={'lg'}
+      boxShadow={"lg"}
       py='5'
       px='5'
       opacity={isVisible ? 1 : 0}
-      pointerEvents={isVisible ? 'auto' : 'none'}
+      pointerEvents={isVisible ? "auto" : "none"}
     >
       <a
         target='_blank'
@@ -77,18 +77,18 @@ export const FloatingSocialBar = () => {
         rel='noreferrer'
       >
         <Icon
-          _hover={{ transform: 'scale(1.3)' }}
-          transition={'0.2s'}
-          cursor={'pointer'}
+          _hover={{ transform: "scale(1.3)" }}
+          transition={"0.2s"}
+          cursor={"pointer"}
           boxSize={5}
           as={FaLinkedin}
         />
       </a>
       <a target='_blank' href='https://github.com/beefysalad' rel='noreferrer'>
         <Icon
-          _hover={{ transform: 'scale(1.3)' }}
-          transition={'0.2s'}
-          cursor={'pointer'}
+          _hover={{ transform: "scale(1.3)" }}
+          transition={"0.2s"}
+          cursor={"pointer"}
           boxSize={5}
           as={FaGithub}
         />
@@ -98,11 +98,11 @@ export const FloatingSocialBar = () => {
         href='https://www.facebook.com/Jpatrickzxc/'
         rel='noreferrer'
       >
-        {' '}
+        {" "}
         <Icon
-          _hover={{ transform: 'scale(1.3)' }}
-          transition={'0.2s'}
-          cursor={'pointer'}
+          _hover={{ transform: "scale(1.3)" }}
+          transition={"0.2s"}
+          cursor={"pointer"}
           boxSize={5}
           as={FaFacebook}
         />
@@ -112,37 +112,13 @@ export const FloatingSocialBar = () => {
         rel='noreferrer'
         href='https://www.instagram.com/ptrcckkk/'
       >
-        {' '}
+        {" "}
         <Icon
-          _hover={{ transform: 'scale(1.3)' }}
-          transition={'0.2s'}
-          cursor={'pointer'}
+          _hover={{ transform: "scale(1.3)" }}
+          transition={"0.2s"}
+          cursor={"pointer"}
           boxSize={5}
           as={FaInstagram}
-        />
-      </a>
-      <a target='_blank' rel='noreferrer' href='https://twitter.com/zephyrusx_'>
-        {' '}
-        <Icon
-          _hover={{ transform: 'scale(1.3)' }}
-          transition={'0.2s'}
-          cursor={'pointer'}
-          boxSize={5}
-          as={FaTwitter}
-        />
-      </a>
-      <a
-        target='_blank'
-        rel='noreferrer'
-        href='https://www.reddit.com/user/BeefedSalad_'
-      >
-        {' '}
-        <Icon
-          _hover={{ transform: 'scale(1.3)' }}
-          transition={'0.2s'}
-          cursor={'pointer'}
-          boxSize={5}
-          as={FaReddit}
         />
       </a>
     </VStack>
