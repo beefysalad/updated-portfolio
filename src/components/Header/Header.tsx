@@ -8,21 +8,21 @@ import {
   Spacer,
   Text,
   useColorModeValue,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-import { ColorModeSwitcher } from '../../ColorModeSwitcher';
-import { useEffect, useState } from 'react';
-import { FloatingSocialBar } from './FloatingSocialBar';
-import { GoUpButton } from './GoUpButton';
-import { ProgressBar } from './ProgressBar';
+import { ColorModeSwitcher } from "../../ColorModeSwitcher";
+import { useEffect, useState } from "react";
+import { FloatingSocialBar } from "./FloatingSocialBar";
+import { GoUpButton } from "./GoUpButton";
+import { ProgressBar } from "./ProgressBar";
 
 export const Header = () => {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false);
-  const bg = useColorModeValue('gray.50', 'rgb(9,24,47)');
+  const bg = useColorModeValue("gray.50", "rgb(9,24,47)");
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const boxShadow = hasScrolled ? useColorModeValue('lg', '2xl') : 'none';
-  const logoColor = useColorModeValue('#058C42', '#64ffda');
-  const headerText = useColorModeValue('#058C42', '#64ffda');
+  const boxShadow = hasScrolled ? useColorModeValue("lg", "2xl") : "none";
+  const logoColor = useColorModeValue("#058C42", "#64ffda");
+  const headerText = useColorModeValue("#058C42", "#64ffda");
   const scrollToTarget = (id: string) => {
     const target = document.getElementById(id);
     if (target) {
@@ -30,7 +30,7 @@ export const Header = () => {
       const offset = 100; // Adjust this value to set the desired margin to the top
       window.scrollTo({
         top: window.pageYOffset + top - offset,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
@@ -40,15 +40,15 @@ export const Header = () => {
       const scrollPos = window.scrollY || document.documentElement.scrollTop;
       setHasScrolled(scrollPos > 0);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
     <Box
       zIndex='10'
-      maxH={{ base: '70px', md: '70px' }}
+      maxH={{ base: "70px", md: "70px" }}
       h='full'
       w='full'
       position='fixed'
@@ -58,81 +58,81 @@ export const Header = () => {
       bg={bg}
     >
       <Flex
-        justifyContent={'center'}
-        px={{ base: '10', md: '5', lg: '8' }}
-        py={{ base: '6', md: '5', lg: '5' }}
+        justifyContent={"center"}
+        px={{ base: "10", md: "5", lg: "8" }}
+        py={{ base: "6", md: "5", lg: "5" }}
       >
         <Heading
-          cursor={'pointer'}
+          cursor={"pointer"}
           size='md'
           // display={{ base: 'none', md: 'inline' }}
           _hover={{ color: logoColor }}
         >
-          Trek
+          PTRCK.DEV
         </Heading>
         <Spacer />
-        <HStack spacing={{ base: '1', md: '10' }}>
+        <HStack spacing={{ base: "1", md: "10" }}>
           <Heading
-            display={{ base: 'none', md: 'inline' }}
-            size={{ base: 'xs', md: 'sm', lg: 'sm' }}
+            display={{ base: "none", md: "inline" }}
+            size={{ base: "xs", md: "sm", lg: "sm" }}
             _hover={{ color: headerText }}
           >
             <Text
-              cursor={'pointer'}
-              _hover={{ underline: 'none' }}
-              onClick={() => scrollToTarget('home')}
+              cursor={"pointer"}
+              _hover={{ underline: "none" }}
+              onClick={() => scrollToTarget("home")}
             >
               Home
             </Text>
           </Heading>
           <Heading
-            display={{ base: 'none', md: 'inline' }}
-            size={{ base: 'xs', md: 'sm', lg: 'sm' }}
+            display={{ base: "none", md: "inline" }}
+            size={{ base: "xs", md: "sm", lg: "sm" }}
             _hover={{ color: headerText }}
           >
             <Text
-              cursor={'pointer'}
-              _hover={{ underline: 'none' }}
-              onClick={() => scrollToTarget('about')}
+              cursor={"pointer"}
+              _hover={{ underline: "none" }}
+              onClick={() => scrollToTarget("about")}
             >
               About
             </Text>
           </Heading>
           <Heading
-            display={{ base: 'none', md: 'inline' }}
-            size={{ base: 'xs', md: 'sm', lg: 'sm' }}
+            display={{ base: "none", md: "inline" }}
+            size={{ base: "xs", md: "sm", lg: "sm" }}
             _hover={{ color: headerText }}
           >
             <Text
-              cursor={'pointer'}
-              _hover={{ underline: 'none' }}
-              onClick={() => scrollToTarget('skills')}
+              cursor={"pointer"}
+              _hover={{ underline: "none" }}
+              onClick={() => scrollToTarget("skills")}
             >
               Skills
             </Text>
           </Heading>
           <Heading
-            display={{ base: 'none', md: 'inline' }}
-            size={{ base: 'xs', md: 'sm', lg: 'sm' }}
+            display={{ base: "none", md: "inline" }}
+            size={{ base: "xs", md: "sm", lg: "sm" }}
             _hover={{ color: headerText }}
           >
             <Text
-              cursor={'pointer'}
-              _hover={{ underline: 'none' }}
-              onClick={() => scrollToTarget('projects')}
+              cursor={"pointer"}
+              _hover={{ underline: "none" }}
+              onClick={() => scrollToTarget("projects")}
             >
               Projects
             </Text>
           </Heading>
           <Heading
-            display={{ base: 'none', md: 'inline' }}
-            size={{ base: 'xs', md: 'sm', lg: 'sm' }}
+            display={{ base: "none", md: "inline" }}
+            size={{ base: "xs", md: "sm", lg: "sm" }}
             _hover={{ color: headerText }}
           >
             <Text
-              cursor={'pointer'}
-              _hover={{ underline: 'none' }}
-              onClick={() => scrollToTarget('connect')}
+              cursor={"pointer"}
+              _hover={{ underline: "none" }}
+              onClick={() => scrollToTarget("connect")}
             >
               Connect
             </Text>
