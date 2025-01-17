@@ -68,7 +68,7 @@ export const Header = () => {
           // display={{ base: 'none', md: 'inline' }}
           _hover={{ color: logoColor }}
         >
-          PTRCK.DEV
+          PTRCK
         </Heading>
         <Spacer />
         <HStack spacing={{ base: "1", md: "10" }}>
