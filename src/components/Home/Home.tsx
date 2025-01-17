@@ -75,9 +75,10 @@ export const Home = () => {
 
               <Spacer />
               <Text textAlign={"justify"}>
-                a passionate computer engineer with a strong interest in
+                a passionate software engineer with a strong interest in
                 developing top-notch solutions for real-world problems.
               </Text>
+
               <HStack
                 w='100%'
                 justifyContent={{ base: "center", md: "flex-start" }}

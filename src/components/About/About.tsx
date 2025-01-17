@@ -70,10 +70,10 @@ export const About = () => {
           </Text>
           <Spacer />
           <Text textAlign={"justify"}>
-            As a graduate of Bachelor of Science in Computer Engineering, I am
-            dedicated to building innovative and dynamic web applications that
-            exceed expectations. With a strong foundation in HTML, CSS, and
-            JavaScript, My tech stack includes but not limited to{" "}
+            As a software engineer, I am dedicated to building innovative and
+            dynamic web applications that exceed expectations. With a strong
+            foundation in HTML, CSS, and JavaScript, my tech stack includes but
+            is not limited to{" "}
             <Code fontSize={"md"} color={color}>
               Nest.js
             </Code>
