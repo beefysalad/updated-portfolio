@@ -217,7 +217,7 @@ export const About = () => {
           </Flex>
           <Text textAlign={{ base: "center" }}>Alliance Software Inc.</Text>
           <Code fontSize={"md"} color={color} textAlign={"center"}>
-            Technical Specialist - Software Engineer
+            Associate Technical Specialist - Software Engineer
           </Code>
           <Badge variant='outline'>Full Time</Badge>
           <HStack as={Flex}>
