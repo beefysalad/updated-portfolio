@@ -8,17 +8,16 @@ import {
   Flex,
   HStack,
   Heading,
-  Progress,
   Spacer,
   Text,
   VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import nest from "../../assets/nest.svg";
 import { CustomAccordionItems } from "./CustomAccordionItems";
 import { LanguageComponent } from "./LanguageComponent";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 export const Skills = () => {
   const bg = useColorModeValue("rgb(9,24,47)", "gray.50");
   const ref = useRef(null);

@@ -62,18 +62,16 @@ export const About = () => {
           </Heading>
           <Spacer />
           <Text textAlign={"justify"}>
-            I am a{" "}
+            I'm a{" "}
             <Code fontSize={"md"} color={color}>
               Software Engineer
             </Code>{" "}
-            with fullstack web development skills based in Cebu, Philippines.
+            based in Cebu, Philippines, with a strong background in full-stack
+            web development.
           </Text>
           <Spacer />
           <Text textAlign={"justify"}>
-            As a software engineer, I am dedicated to building innovative and
-            dynamic web applications that exceed expectations. With a strong
-            foundation in HTML, CSS, and JavaScript, my tech stack includes but
-            is not limited to{" "}
+            My expertise spans
             <Code fontSize={"md"} color={color}>
               Nest.js
             </Code>
@@ -93,7 +91,11 @@ export const About = () => {
             <Code fontSize={"md"} color={color}>
               Prisma ORM
             </Code>
-            .
+            . I have experience maintaining and improving booking engine
+            websites for a well-known airline, as well as developing internal
+            applications that enhance operational efficiency. Passionate about
+            building dynamic and user-focused web solutions, I strive to create
+            seamless and high-performing applications.
           </Text>
 
           <Button
@@ -222,9 +224,7 @@ export const About = () => {
           <Badge variant='outline'>Full Time</Badge>
           <HStack as={Flex}>
             <Text order={{ base: 1, md: 0 }}>
-              {" "}
-              July 2023 - Present ({(moment as any)("2023-08-14").fromNow(true)}
-              )
+              Present ({(moment as any)("2023-08-14").fromNow(true)})
             </Text>
             <Icon color={color} boxSize={5} as={FaCalendar} />
           </HStack>
