@@ -58,7 +58,8 @@ export const Header = () => {
       bg={bg}
     >
       <Flex
-        justifyContent={"center"}
+        align='center' // Ensures everything inside is vertically aligned
+        justifyContent='center'
         px={{ base: "10", md: "5", lg: "8" }}
         py={{ base: "6", md: "5", lg: "5" }}
       >
